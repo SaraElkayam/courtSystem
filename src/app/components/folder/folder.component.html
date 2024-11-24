@@ -1,0 +1,33 @@
+<div *ngIf="folder" class="folder-container">
+ <div class="row">  
+<label>מספר תיק:</label>
+{{folder.folderNum}}
+<label> עוסק:</label>
+{{folder.aboutDescription}}
+<label> סוג התיק:</label>
+</div> 
+<div class="row">
+{{folder.folderType}}
+<label> תקופת זכאות:</label>
+{{folder.eligibilityPeriod}}
+<label> תאריך פתיחת תיק:</label>
+{{folder.fileOpeningDate|date: 'dd/MM/yyyy'}}
+<label> דיון קרוב</label>
+</div>
+<div class="row">
+{{folder.closeDiscussion|date: 'dd/MM/yyyy'}}
+<label> :מגיש הערר</label>
+{{folder.appellant}}
+<label> :ב"כ משיבה</label>
+{{folder.responds}}
+<label> :יו"ר וועדה</label>
+{{folder.charinamOfTheComitte}}
+<label> נציג ציבור:</label>
+{{folder.publicRepresentative}}
+</div>
+</div>
+
+
+
+
+

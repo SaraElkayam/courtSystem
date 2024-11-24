@@ -1,0 +1,22 @@
+<h1>חיפוש תיקים</h1>
+<div class="searchContainer">
+<input class="inPutSeach"  [placeholder]="placeholderSearch" class="inputSearch">
+<mat-button-toggle-group [(ngModel)]="selectedValue" aria-label="Font Style" class="toggle">
+    <mat-button-toggle value="all">הכל</mat-button-toggle>
+    <mat-button-toggle value="myFolders">תיקים שלי</mat-button-toggle>
+    <mat-button-toggle value="activeFolders">תיקים פעילים</mat-button-toggle>
+    <mat-button-toggle value="closeFolders">תיקים סגורים</mat-button-toggle>
+</mat-button-toggle-group>
+
+<div>
+<mat-form-field>
+    <mat-label>מיון לפי:</mat-label>
+    <select matNativeControl required [(ngModel)]="SortOption" name="sortOption" (ngModelChange)="sortFolders()">
+      <option value="fileOpeningDate">תאריך פתיחה</option>
+      <option value="folderNum">מספר תיק</option>
+    </select>
+  </mat-form-field>
+</div>
+<div  *ngFor="let folder of folders| filterClass:selectedValue" class="item" ><app-folder [folder]="folder"></app-folder></div>
+</div>
+

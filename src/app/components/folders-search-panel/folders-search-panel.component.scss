@@ -1,0 +1,21 @@
+$search-button-size: 31px;
+$expanded-search-box-height: 37px;
+$border-radius: 40px;
+
+.search-input-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    align-items: center;
+  .search-input{
+    overflow: hidden;
+    background: white;
+    
+    height:$expanded-search-box-height;
+  }
+  .toggle-group{
+    height:$expanded-search-box-height;
+    border-radius:$border-radius 0 0 $border-radius;
+  }
+}
